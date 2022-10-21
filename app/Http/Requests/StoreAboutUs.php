@@ -25,11 +25,11 @@ class StoreAboutUs extends FormRequest
     public function rules()
     {
         return [
-            'image'             => 'required|mimes:jpeg,jpg,png,gif,webp',
-            'title_it'          => 'required',
+            'image'             => 'nullable|mimes:jpeg,jpg,png,gif,webp',
+            'title_it'          => 'nullable',
             'title_en'          => 'required',
-            'subtitle_it'       => 'required',
-            'subtitle_en'       => 'required',
+            'subtitle_it'       => 'nullable',
+            'subtitle_en'       => 'nullable',
             'description_it'    => 'required',
             'description_en'    => 'required',
 
@@ -40,10 +40,10 @@ class StoreAboutUs extends FormRequest
     {
         return [
             'image.mimes'        => 'صيغة الصورة غير مسموحة',
-            'title_ar.required' => 'يجب إدخال الاسم بالايطالي',
+//            'title_ar.required' => 'يجب إدخال الاسم بالايطالي',
             'title_en.required' => 'يجب إدخال الاسم بالانجليزية',
-            'subtitle_ar.required' => 'يجب إدخال الهامش بالايطالي',
-            'subtitle_en.required' => 'يجب إدخال الهامش بالانجليزية',
+//            'subtitle_ar.required' => 'يجب إدخال الهامش بالايطالي',
+//            'subtitle_en.required' => 'يجب إدخال الهامش بالانجليزية',
             'description_ar.required' => 'يجب إدخال الوصف بالايطالي',
             'description_en.required' => 'يجب إدخال الوصف بالانجليزية',
         ];

@@ -50,11 +50,19 @@
                             </div>
                             <div class="form-group">
                                 <label for="name" class="form-control-label">Address</label>
-                                <textarea type="text" class="form-control" name="address" id="address">{{ $setting->address }}</textarea>
+                                <textarea type="text" class="form-control" rows="10" name="address" id="address">{{ $setting->address }}</textarea>
                             </div>
                             <div class="form-group">
                                 <label for="name" class="form-control-label">Address Map </label>
-                                <textarea type="text" class="form-control" name="address_map" id="address">{{ $setting->address_map }}</textarea>
+                                <textarea type="text" class="form-control" rows="10" name="address_map" id="address">{{ $setting->address_map }}</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="name" class="form-control-label">Return Police EN</label>
+                                <textarea type="text" class="form-control" rows="10" name="return_police_en" id="address">{{ $setting->return_police_en }}</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="name" class="form-control-label">Return Police IT</label>
+                                <textarea type="text" class="form-control" rows="10" name="return_police_it" id="address">{{ $setting->return_police_it }}</textarea>
                             </div>
                             <div class="form-group">
                                 <label for="name" class="form-control-label">Facebook</label>
@@ -74,11 +82,11 @@
                             </div>
                             <div class="form-group">
                                 <label for="name" class="form-control-label">Footer Content IT</label>
-                                <input type="text" class="form-control" name="footer_content_it" id="instagram" value="{{ $setting->footer_content_it }}">
+                                <textarea type="text" class="form-control" rows="5" name="footer_content_it" id="instagram">{{ $setting->footer_content_it }}</textarea>
                             </div>
                             <div class="form-group">
                                 <label for="name" class="form-control-label">Footer Content EN</label>
-                                <input type="text" class="form-control" name="footer_content_en" id="instagram" value="{{ $setting->footer_content_en }}">
+                                <textarea type="text" class="form-control" rows="5" name="footer_content_en" id="instagram">{{ $setting->footer_content_en }}</textarea>
                             </div>
 
                             <div class="modal-footer">

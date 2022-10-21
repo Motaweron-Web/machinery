@@ -55,6 +55,8 @@ return [
     'Vendor' => ' Venditore:',
     'tag' => ' Etichetta:',
 
-
+    'rating' => 'Valutazione ',
+    'description' => 'Descrizione ',
+    'return' => 'Spedizione & Reso',
 
 ];

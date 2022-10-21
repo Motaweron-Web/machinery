@@ -123,9 +123,22 @@
                                    {{ \Illuminate\Support\Str::limit(strip_tags($product->Desc),230) }}
                                 </p>
                             </div>
+                            <!-- rate -->
                             @if(auth()->guard('user')->check())
-                            <form action="{{ route('orders_store') }}" method="post">
-                                @csrf
+                                <form action="{{ route('orders_store') }}" method="post">
+                                    @csrf
+                            <div class="cartDetailsBoxrate" id="ratingForm" >
+                                @for($i = 1; $i < 6; $i++)
+                                <i class="fa-regular fa-star"><input hidden type="hidden" name="rate" value="{{$i}}"></i>
+                                @endfor
+                            </div>
+                                    <br>
+                            <script>
+                                $(".fa-star").mouseover(function(){
+                                    $(this).removeClass('fa-regular').addClass('fa-solid');
+                                });
+                            </script>
+
                                 <input hidden name="user_id" value="{{ user()->id()}}">
                                 <input hidden name="product_id" value="{{ $product->id }}">
                             <!-- button + counter -->
@@ -171,6 +184,22 @@
                                         {{ $product->tag }}
                                     </p>
                                 </div>
+                                <h1>@lang('home.rating')({{ $orders->count('rate') }})</h1><hr>
+                                <div class="cartDetailsBoxrate" id="ratingForm" >
+                                    @for($i = 1; $i < 6; $i++)
+                                        <i class="fa-solid fa-star"></i>
+                                    @endfor
+                                </div> <br>
+                                <div class="cartDetailsBoxrate" id="ratingForm" >
+                                    @for($i = 1; $i < 4; $i++)
+                                        <i class="fa-solid fa-star"></i>
+                                    @endfor
+                                </div> <br>
+                                <div class="cartDetailsBoxrate" id="ratingForm" >
+                                    @for($i = 1; $i < 3; $i++)
+                                        <i class="fa-solid fa-star"></i>
+                                    @endfor
+                                </div> <br>
                             </div>
                         </div>
                     </div>
@@ -190,51 +219,33 @@
                         <div class="headFilter">
                             <ul>
                                 <li>
-                                    <a href="#!" class="active" data-show="Description"> Description </a>
+                                    <a href="#!" class="active" data-show="Description"> @lang('home.description')</a>
                                 </li>
                                 <li>
-                                    <a href="#!" data-show="Return"> Shipping & Return </a>
+                                    <a href="#!" data-show="Return"> @lang('home.return') </a>
                                 </li>
 
                             </ul>
                         </div>
                         <div class="headFilterP">
                             <div id="Description" class="active">
+                                <h2>
+                                   @lang('home.description')
+                                </h2>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                                </p>
-                                <p>
-                                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                                    {{ strip_tags($product->Desc) }}
                                 </p>
                             </div>
                             <div id="Return">
                                 <div class="ReturnsPolicy">
                                     <h6>
-                                        ReturnsPolicy
+                                        @lang('home.return')
                                     </h6>
+                                    @foreach($settings as $setting)
                                     <p>
-                                        You may return most new, unopened items within 30 days of delivery for a full refund. We'll also pay the return shipping costs if the return is a result of our error (you received an incorrect or defective item, etc.).
+                                        {{ $setting->ReturnPolice }}
                                     </p>
-                                    <p>
-                                        You should expect to receive your refund within four weeks of giving your package to the return shipper, however, in many cases you will receive a refund more quickly. This time period includes the transit time for us to receive your return from the shipper (5 to 10 business days), the time it takes us to process your return once we receive it (3 to 5 business days), and the time it takes your bank to process our refund request (5 to 10 business days).
-                                    </p>
-                                    <p>
-                                        If you need to return an item, simply login to your account, view the order using the 'Complete Orders' link under the My Account menu and click the Return Item(s) button. We'll notify you via e-mail of your refund once we've received and processed the returned item.
-                                    </p>
-                                </div>
-                                <div class="shoppinng">
-                                    <h6>
-                                        Shipping
-                                    </h6>
-                                    <p>
-                                        We can ship to virtually any address in the world. Note that there are restrictions on some products, and some products cannot be shipped to international destinations.
-                                    </p>
-                                    <p>
-                                        When you place an order, we will estimate shipping and delivery dates for you based on the availability of your items and the shipping options you choose. Depending on the shipping provider you choose, shipping date estimates may appear on the shipping quotes page.
-                                    </p>
-                                    <p>
-                                        Please also note that the shipping rates for many items we sell are weight-based. The weight of any such item can be found on its detail page. To reflect the policies of the shipping companies we use, all weights will be rounded up to the next full pound.
-                                    </p>
+                                    @endforeach
                                 </div>
                             </div>
 

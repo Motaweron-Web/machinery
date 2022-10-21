@@ -29,8 +29,10 @@ class StoreSetting extends FormRequest
             'title_en'                  => 'nullable',
             'subtitle_it'               => 'nullable',
             'subtitle_en'               => 'nullable',
+            'return_police_en'               => 'nullable',
+            'return_police_it'               => 'nullable',
 
-            'phone'                     => 'nullable|numeric',
+            'phone'                     => 'nullable',
             'phone2'                    => 'nullable',
             'email'                     => 'nullable',
             'address'                   => 'nullable',

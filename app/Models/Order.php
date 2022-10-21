@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -14,6 +15,7 @@ class Order extends Model
     protected $fillable = [
         'user_id',
         'product_id',
+        'rate'
     ];
 
     public function user()
@@ -27,4 +29,5 @@ class Order extends Model
     } // end of orders
 
     public $timestamps = false;
+
 }

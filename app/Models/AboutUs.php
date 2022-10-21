@@ -20,15 +20,15 @@ class AboutUs extends Model
 
     ];
 
-    public function getTitleAttribute()
-    {
-        return $this->attributes['title_' . app()->getlocale()];
-    }
-
-    public function getSubTitleAttribute()
-    {
-        return $this->attributes['subtitle_' . app()->getlocale()];
-    }
+//    public function getTitleAttribute()
+//    {
+//        return $this->attributes['title_' . app()->getlocale()];
+//    }
+//
+//    public function getSubTitleAttribute()
+//    {
+//        return $this->attributes['subtitle_' . app()->getlocale()];
+//    }
 
     public function getDescriptionAttribute()
     {

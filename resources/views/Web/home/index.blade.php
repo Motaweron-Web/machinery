@@ -137,7 +137,7 @@
 
                         <div class="detailsAboutUsUp">
                             <div class="bgWave"></div>
-                            <h2>{{ $about->Title }}</h2>
+                            <h2>{{ $about->title_en }}</h2>
                             <p> @lang('home.years_of_experience') </p>
                         </div>
                         <div class="detailsAboutUsDown">

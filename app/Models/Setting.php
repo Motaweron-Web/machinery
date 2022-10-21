@@ -21,6 +21,8 @@ protected $fillable = [
         'email',
         'address',
         'address_map',
+        'return_police_en',
+        'return_police_it',
         'facebook',
         'insta',
         'youtube',
@@ -42,5 +44,10 @@ protected $fillable = [
     public function getContentAttribute()
     {
         return $this->attributes['footer_content_' . app()->getlocale()];
+    }
+
+    public function getReturnPoliceAttribute()
+    {
+        return $this->attributes['return_police_' . app()->getlocale()];
     }
 }

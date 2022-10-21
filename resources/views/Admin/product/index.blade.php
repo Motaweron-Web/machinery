@@ -31,8 +31,8 @@
                                 <th class="min-w-50px">title it</th>
                                 <th class="min-w-50px">price</th>
                                 <th class="min-w-50px">discount</th>
-                                <th class="min-w-50px">desc en</th>
-                                <th class="min-w-50px">desc it</th>
+{{--                                <th class="min-w-50px">desc en</th>--}}
+{{--                                <th class="min-w-50px">desc it</th>--}}
                                 <th class="min-w-50px">product type</th>
                                 <th class="min-w-50px rounded-end">Action</th>
                             </tr>
@@ -98,8 +98,8 @@
             {data: 'title_it', name: 'title_it'},
             {data: 'price', name: 'price'},
             {data: 'discount', name: 'discount'},
-            {data: 'desc_en', name: 'desc_en'},
-            {data: 'desc_it', name: 'desc_it'},
+            // {data: 'desc_en', name: 'desc_en'},
+            // {data: 'desc_it', name: 'desc_it'},
             {data: 'product_type', name: 'product_type'},
 
             {data: 'action', name: 'action', orderable: false, searchable: false},

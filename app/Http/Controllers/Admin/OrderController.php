@@ -32,7 +32,7 @@ class OrderController extends Controller
                 })
                 ->editColumn('product_id', function ($order){
                     return '<form action="'. route('details_product',$order->products->id) .'" method="get">
-                    <button type="submit"><i class="fa fa-door-open"></i>'. $order->products->title_en .'</button>
+                    <button class="btn btn-green" type="submit"><i class="fa fa-door-open"></i>'. $order->products->title_en .'</button>
                             </form>';
                 })
                 ->addColumn('price', function ($order){

@@ -63,7 +63,7 @@
                                             <i class="fa-regular fa-calendar-days"></i> {{ $project->year }}
                                         </li>
                                         <li>
-                                            <i class="fa-regular fa-money-bill"></i> {{ number_format($project->salary,2) }}
+                                            <i class="fa-regular fa-money-bill"></i> {{ number_format($project->salary) }}$
                                         </li>
 
                                     </ul>

@@ -12,17 +12,20 @@
                 <div class="card-header">
                     <h3 class="card-title"> Admins {{($setting->title) ?? ''}}</h3>
                     <div class="">
+                        @if(auth()->guard('admin')->id() == 1)
                         <button class="btn btn-secondary btn-icon text-white addBtn">
 									<span>
 										<i class="fe fe-plus"></i>
                                         Add New
 									</span>
                         </button>
+                        @endif
                     </div>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
                         <!--begin::Table-->
+                        @if(auth()->guard('admin')->id() == 1)
                         <table class="table table-striped table-bordered text-nowrap w-100" id="dataTable">
                             <thead>
                             <tr class="fw-bolder text-muted bg-light">
@@ -34,6 +37,9 @@
                             </tr>
                             </thead>
                         </table>
+                        @else
+                            <h1>You don't have permission here</h1>
+                        @endif
                     </div>
                 </div>
             </div>

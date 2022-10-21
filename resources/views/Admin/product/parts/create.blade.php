@@ -30,11 +30,11 @@
     </div>
     <div class="form-group">
         <label for="name" class="form-control-label">desc en</label>
-        <textarea type="text" class="form-control editor" name="desc_en" id="name_en" ></textarea>
+        <textarea type="text" class="form-control" rows="10" name="desc_en" id="name_en" ></textarea>
     </div>
     <div class="form-group">
         <label for="name" class="form-control-label">desc it</label>
-        <textarea type="text" class="form-control editor" name="desc_it" id="name_en"> </textarea>
+        <textarea type="text" class="form-control" rows="10" name="desc_it" id="name_en"> </textarea>
     </div>
     <div class="form-group">
         <label for="name" class="form-control-label">product type</label>

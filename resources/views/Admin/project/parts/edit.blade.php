@@ -18,20 +18,20 @@
         </div>
         <div class="form-group">
             <label for="name" class="form-control-label">Description IT</label>
-            <textarea type="text" class="form-control editor" name="description_it" id="title_ar">{{ $projects->description_it }}</textarea>
+            <textarea type="text" class="form-control " rows="10" name="description_it" id="title_ar">{{ $projects->description_it }}</textarea>
         </div>
         <div class="form-group">
             <label for="name" class="form-control-label">Description EN</label>
-            <textarea type="text" class="form-control editor" name="description_en" id="title_en">{{ $projects->description_en }}</textarea>
+            <textarea type="text" class="form-control " rows="10" name="description_en" id="title_en">{{ $projects->description_en }}</textarea>
         </div>
 
         <div class="form-group">
             <label for="name" class="form-control-label">Number of Machines</label>
-            <input type="tel" class="form-control" name="machine" id="name_en" value="{{ $projects->machine }}">
+            <input type="number" class="form-control" name="machine" id="name_en" value="{{ $projects->machine }}">
         </div>
         <div class="form-group">
             <label for="name" class="form-control-label">Address</label>
-            <input type="text" class="form-control" name="address" id="name_en" value="{{ $projects->address }}">
+            <textarea type="text" class="form-control" rows="3" name="address" id="name_en">{{ $projects->address }}</textarea>
         </div>
         <div class="form-group">
             <label for="name" class="form-control-label">Salary</label>

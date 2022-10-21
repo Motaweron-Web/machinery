@@ -16,11 +16,11 @@
     </div>
     <div class="form-group">
         <label for="name" class="form-control-label">Description IT</label>
-        <textarea type="text" class="form-control editor" name="description_it" id="title_ar"></textarea>
+        <textarea type="text" class="form-control" rows="10" name="description_it" id="title_ar"></textarea>
     </div>
     <div class="form-group">
         <label for="name" class="form-control-label">Description EN</label>
-            <textarea type="text" class="form-control editor" name="description_en" id="title_en"></textarea>
+            <textarea type="text" class="form-control" rows="10" name="description_en" id="title_en"></textarea>
     </div>
 
         <div class="form-group">
@@ -29,7 +29,7 @@
         </div>
         <div class="form-group">
             <label for="name" class="form-control-label">Address</label>
-            <input type="text" class="form-control" name="address" id="name_en">
+            <textarea type="text" rows="3" class="form-control" name="address" id="name_en"></textarea>
         </div>
         <div class="form-group">
             <label for="name" class="form-control-label">Salary</label>

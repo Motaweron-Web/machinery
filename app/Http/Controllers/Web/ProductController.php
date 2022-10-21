@@ -13,7 +13,7 @@ class ProductController extends Controller
     public function index()
     {
         $settings = Setting::get();
-        $products = Product::paginate(6);
+        $products = Product::paginate(9);
 
         return view('Web.product.index',compact('settings','products'));
     }
@@ -22,8 +22,9 @@ class ProductController extends Controller
     {
         $settings = Setting::get();
         $product = Product::findOrFail($id);
+        $orders = Order::where('product_id',$id);
 
-        return view('Web.product.details',compact('settings','product'));
+        return view('Web.product.details',compact('settings','product','orders'));
     }
 
     public function storeOrder(Request $request)
@@ -31,6 +32,7 @@ class ProductController extends Controller
         $request->validate([
             'user_id' => 'required',
             'product_id' => 'required',
+            'rate' => 'nullable',
         ]);
 
         $inputs = $request->all();

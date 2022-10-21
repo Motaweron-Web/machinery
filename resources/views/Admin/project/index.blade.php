@@ -29,8 +29,8 @@
                                 <th class="min-w-50px">Image</th>
                                 <th class="min-w-50px">Title IT</th>
                                 <th class="min-w-50px">Title EN</th>
-                                <th class="min-w-50px">Description IT</th>
-                                <th class="min-w-50px">Description EN</th>
+{{--                                <th class="min-w-50px">Description IT</th>--}}
+{{--                                <th class="min-w-50px">Description EN</th>--}}
                                 <th class="min-w-50px">Machine</th>
                                 <th class="min-w-50px">Address</th>
                                 <th class="min-w-50px">Year</th>
@@ -97,8 +97,8 @@
             {data: 'image', name: 'image'},
             {data: 'title_it', name: 'title_it'},
             {data: 'title_en', name: 'title_en'},
-            {data: 'description_it', name: 'description_it'},
-            {data: 'description_en', name: 'description_en'},
+            // {data: 'description_it', name: 'description_it'},
+            // {data: 'description_en', name: 'description_en'},
             {data: 'machine', name: 'machine'},
             {data: 'address', name: 'address'},
             {data: 'year', name: 'year'},

@@ -54,6 +54,9 @@ return [
     'product_type' => ' Product Type:',
     'Vendor' => '  Vendor:',
     'tag' => ' Tag:',
+    'rating' => ' Rating',
+    'description' => ' Description',
+    'return' => 'Shipping & Return',
 
 
 

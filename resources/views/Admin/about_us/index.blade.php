@@ -28,11 +28,11 @@
 {{--                                <th class="min-w-25px">#</th>--}}
                                 <th class="min-w-50px">image</th>
 {{--                                <th class="min-w-50px">الاسم بالعربية</th>--}}
-                                <th class="min-w-50px">en title </th>
-                                <th class="min-w-50px">it title </th>
+                                <th class="min-w-50px">experience year </th>
+{{--                                <th class="min-w-50px">it experience </th>--}}
 {{--                                <th class="min-w-125px">هامش بالعربية</th>--}}
-                                <th class="min-w-125px">subtitle en</th>
-                                <th class="min-w-125px">subtitle it</th>
+{{--                                <th class="min-w-125px">subtitle en</th>--}}
+{{--                                <th class="min-w-125px">subtitle it</th>--}}
 {{--                                <th class="min-w-125px">الوصف بالعربية</th>--}}
                                 <th class="min-w-125px">description en</th>
                                 <th class="min-w-125px">description it</th>
@@ -97,9 +97,9 @@
             // {data: 'id', name: 'id'},
             {data: 'image', name: 'image'},
             {data: 'title_en', name: 'title_en'},
-            {data: 'title_it', name: 'title_it'},
-            {data: 'subtitle_en', name: 'subtitle_en'},
-            {data: 'subtitle_it', name: 'subtitle_it'},
+            // {data: 'title_it', name: 'title_it'},
+            // {data: 'subtitle_en', name: 'subtitle_en'},
+            // {data: 'subtitle_it', name: 'subtitle_it'},
             {data: 'description_en', name: 'description_en'},
             {data: 'description_it', name: 'description_it'},
 
