@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Oct 21, 2022 at 08:53 AM
+-- Generation Time: Oct 21, 2022 at 09:19 AM
 -- Server version: 5.7.33
 -- PHP Version: 7.4.19
 
@@ -68,8 +68,7 @@ CREATE TABLE `admins` (
 --
 
 INSERT INTO `admins` (`id`, `name`, `email`, `password`, `image`, `created_at`, `updated_at`) VALUES
-(1, 'Abdallah Mahmoud', 'admin@admin.com', '$2y$10$UN2xp3UZdCkP.32o4Yik5u2E5uFOrp9U6WK6EXdlboF9QIQSxDO3y', 'assets/uploads/admins/97361666014330.webp', '2022-10-10 13:34:24', NULL),
-(3, 'عبدالله محمود', 'lord@admin.com', '$2y$10$.eKZgjZljPuFHifGnL78iefwSUt1ePQVh3FM0ymLVZqN/VT6gqgAK', NULL, '2022-10-21 07:21:16', '2022-10-21 07:21:16');
+(1, 'admin', 'admin@admin.com', '$2y$10$UN2xp3UZdCkP.32o4Yik5u2E5uFOrp9U6WK6EXdlboF9QIQSxDO3y', 'assets/uploads/admins/97361666014330.webp', '2022-10-10 13:34:24', '2022-10-21 09:09:22');
 
 -- --------------------------------------------------------
 
@@ -94,9 +93,7 @@ CREATE TABLE `contact_us` (
 --
 
 INSERT INTO `contact_us` (`id`, `name`, `email`, `phone`, `whatsapp`, `subject`, `message`, `created_at`, `updated_at`) VALUES
-(2, 'التجمع الخامس', 'admin@admin.com', '01098604983', '2342342', NULL, 'dasdasdasdasd', '2022-10-19 17:03:18', '2022-10-19 17:03:18'),
-(3, 'التجمع الخامس', 'admin@admin.com', '01098604983', '24534556', NULL, 'ffgatygnghfgsdg', '2022-10-19 17:03:46', '2022-10-19 17:03:46'),
-(4, 'عبدالله محمود', 'admin@admin.com', '01098604983', '11', NULL, '42553426556', '2022-10-19 17:04:35', '2022-10-19 17:04:35');
+(5, 'lord', 'lord@gmail.com', '01098604983', '11', NULL, 'dasda', '2022-10-21 09:08:25', '2022-10-21 09:08:25');
 
 -- --------------------------------------------------------
 
@@ -438,7 +435,7 @@ ALTER TABLE `admins`
 -- AUTO_INCREMENT for table `contact_us`
 --
 ALTER TABLE `contact_us`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `migrations`
